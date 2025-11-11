@@ -105,31 +105,6 @@ export const Gauge = ({
             </span>
             <span className="text-muted-foreground text-sm mt-1">{unit}</span>
           </div>
-          
-          {/* Needle */}
-          <div 
-            className="absolute top-1/2 left-1/2 w-1 h-16 -mt-16 -ml-0.5 origin-bottom rounded-full"
-            style={{
-              background: currentColor,
-              transform: `rotate(${rotation}deg)`,
-              transition: "transform 1.5s cubic-bezier(0.4, 0, 0.2, 1)",
-              boxShadow: `0 0 10px ${currentColor}`
-            }}
-          >
-            <div 
-              className="absolute top-0 left-1/2 w-3 h-3 -ml-1.5 -mt-1 rounded-full"
-              style={{ background: currentColor }}
-            />
-          </div>
-          
-          {/* Center dot */}
-          <div 
-            className="absolute top-1/2 left-1/2 w-4 h-4 -ml-2 -mt-2 rounded-full border-4"
-            style={{ 
-              borderColor: currentColor,
-              background: "hsl(var(--card))"
-            }}
-          />
         </div>
         
         <div className="text-center">
