@@ -57,6 +57,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        gauge: {
+          green: "hsl(var(--gauge-green))",
+          yellow: "hsl(var(--gauge-yellow))",
+          red: "hsl(var(--gauge-red))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +85,30 @@ export default {
             height: "0",
           },
         },
+        "gauge-fill": {
+          "0%": {
+            transform: "rotate(-90deg)",
+          },
+          "100%": {
+            transform: "rotate(var(--gauge-rotation))",
+          },
+        },
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "gauge-fill": "gauge-fill 1.5s ease-out forwards",
+        "fade-in": "fade-in 0.5s ease-out forwards",
       },
     },
   },
